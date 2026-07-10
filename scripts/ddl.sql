@@ -30,5 +30,3 @@ WITH (
 	FIELDTERMINATOR = ',',
 	ROWTERMINATOR = '\n'
 
-);
-
