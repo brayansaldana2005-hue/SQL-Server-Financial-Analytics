@@ -1,12 +1,6 @@
 -- Crear la base de datos si no existe
-IF DB_ID('BD_HR_3RA') IS NULL
-BEGIN
-    CREATE DATABASE BD_HR_3RA;
-END
-GO
-
-USE BD_HR_3RA;
-GO
+    CREATE DATABASE Financial_accounting;
+   USE Financial_accounting;
 
 -- Crear tabla para importar el CSV financiero
 IF OBJECT_ID('dbo.financial_accounting', 'U') IS NOT NULL
@@ -37,3 +31,4 @@ WITH (
 	ROWTERMINATOR = '\n'
 
 );
+
