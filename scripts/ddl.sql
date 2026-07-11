@@ -30,3 +30,7 @@ WITH (
 	FIELDTERMINATOR = ',',
 	ROWTERMINATOR = '\n'
 
+SELECT * 
+FROM Financial_accounting ;
+
+
