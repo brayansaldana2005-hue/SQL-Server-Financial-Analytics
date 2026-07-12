@@ -1,3 +1,4 @@
+![Baneer_vertical](./picture/Baneer_vertical.png)
 
 # Proyecto SQL: Análisis Financiero y Contable - Gestión de Cuentas por Cobrar y Transacciones
 
@@ -17,7 +18,7 @@ El personal contable y financiero de **SQLITO SAC** desea mejorar el control de 
 Los datos originales, junto con una explicación de cada columna, se pueden encontrar [aquí](https://www.kaggle.com/datasets/jazidesigns/financial-accounting)
 
 El conjunto de datos incluye una tabla que captura transacciones contables: montos de débito y crédito, categorías de cuenta, tipos de transacción, clientes/proveedores y métodos de pago, distribuidos en 100,000 registros y 10 columnas.
-![financial-analytics](./picture/Tabla_muestrada.png)
+![Sample table of financial transactions showing column headers and several example rows. Visible column headers include Date, Account, Debit, Credit, Category, Customer_Vendor and Reference. Example rows show dates, account names, numeric debit and credit amounts, categories such as Asset Liability Revenue Expense, customer or vendor names and reference identifiers. The image presents a sterile spreadsheet environment typical of accounting reports and conveys a factual, data-focused tone.]
 
 ## Tareas (Task)
 
@@ -53,7 +54,7 @@ SELECT
     SUM(CASE WHEN [Reference] IS NULL THEN 1 ELSE 0 END) AS Nulos_Reference
 FROM dbo.financial_accounting;
 ```
-
+#### Valores Duplicados 
 Se verificó la existencia de duplicados en el campo `Reference`. Se encontraron **27,470 registros** con números de referencia repetidos
 ```sql
 -- Verificar valores duplicados en la tabla financial_accounting 
