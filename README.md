@@ -360,3 +360,23 @@ ORDER BY Mes ASC;
 El año 2023 cerró con 6 meses de ganancia y 6 meses de pérdida. Marzo fue el mes más rentable (+$74,086.86), mientras que Mayo registró la mayor pérdida (-$38,573.74). El segundo semestre mostró mayor debilidad, con pérdidas en 4 de 5 meses entre julio y noviembre, aunque diciembre logró cerrar el año con una recuperación positiva (+$25,352.26).
 
 Esta alternancia entre ganancias y pérdidas sugiere que la empresa no tiene un control estable de sus gastos operativos frente a sus ingresos. El equipo financiero debería investigar las causas del deterioro observado en el segundo semestre, especialmente en mayo, julio, septiembre y noviembre, para identificar si corresponde a gastos extraordinarios, estacionalidad de ingresos, o falta de control presupuestario.
+
+## Conclusiones Generales
+
+Tras el análisis de las 100,000 transacciones contables registradas durante 2023, se identificaron los siguientes hallazgos clave:
+
+**Distribución del negocio:**
+- Las cuatro categorías de cuenta (Asset, Revenue, Expense, Liability) mantienen un peso equilibrado, cada una representando aproximadamente el 25% del monto total transaccionado.
+- Los cuatro métodos de pago (Check, Bank Transfer, Cash, Credit Card) también muestran una distribución pareja, sin un canal dominante.
+
+**Cartera de clientes/proveedores:**
+- El Top 10 de clientes/proveedores está compuesto por cuentas de valor similar, sin dependencia crítica de uno solo.
+- El 10% de los clientes/proveedores más grandes concentra únicamente el 10.61% del monto total, lo que indica una cartera diversificada y de bajo riesgo de concentración.
+- Se identificaron 15 clientes/proveedores con desviaciones moderadas (5%-7.3%) respecto al promedio de su categoría, que podrían revisarse por condiciones comerciales particulares.
+
+**Comportamiento financiero:**
+- El año 2023 se mantuvo estable mes a mes en volumen de transacciones, sin estacionalidad marcada (variación máxima de 3.5% entre el mes más fuerte y el más débil).
+- Al comparar Revenue vs. Expense, el año cerró dividido entre 6 meses de ganancia y 6 de pérdida, con un deterioro notable en el segundo semestre (4 de 5 meses en pérdida entre julio y noviembre).
+
+**Recomendación principal:**
+El equipo financiero debería priorizar la investigación de las causas detrás de las pérdidas recurrentes del segundo semestre, particularmente en mayo, julio, septiembre y noviembre, ya que representan el mayor riesgo identificado en este análisis frente a una cartera de clientes y estructura de cuentas que, por lo demás, se mantiene sana y diversificada.
