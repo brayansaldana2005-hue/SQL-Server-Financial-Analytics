@@ -83,6 +83,7 @@ GROUP BY Category
 ORDER BY Total_Debito DESC;
 ```
 ![imagen p1](./picture/P1.png)
+
 *Monto total de débito y crédito por categoría de cuenta*
 
 Las cuatro categorías de cuenta (Asset, Revenue, Expense, Liability) muestran un volumen de transacciones y montos muy equilibrados entre sí (25,000 transacciones y 15 millones cada una), sin una categoría que domine claramente sobre las demás. Además, se confirma que el monto de débito es idéntico al de crédito en cada categoría.
@@ -104,6 +105,7 @@ GROUP BY Payment_Method
 ORDER BY Monto_Total DESC;
 ```
 ![imagen p2](./picture/P2.png)
+
 *Transacciones y monto total por método de pago*
 
 Los cuatro métodos de pago (Check, Bank Transfer, Cash, Credit Card) presentan una distribución muy equilibrada, tanto en cantidad de transacciones (25,000 cada uno) como en monto total (15 millones cada uno). El método Check lidera ligeramente con $15.3 millones, pero la diferencia frente al de menor volumen (Credit Card) es inferior al 1.3%, por lo que no se identifica una preferencia dominante de pago.
@@ -126,6 +128,7 @@ GROUP BY Customer_Vendor
 ORDER BY Monto_Total DESC;
 ```
 ![imagen p3](./picture/P3.png)
+
 *Los 10 clientes/proveedores con mayor monto acumulado*
 
 Customer 28 lidera el ranking con $665,442.65 en 1,070 transacciones, seguido de cerca por Customer 90 y Customer 39. La diferencia entre el cliente #1 y el #10 del ranking es de apenas 4.6%, lo que indica que no existe una dependencia crítica de un solo cliente/proveedor dentro del Top 10; el riesgo de concentración está distribuido de forma relativamente uniforme entre ellos.
@@ -148,6 +151,7 @@ GROUP BY Transaction_Type
 ORDER BY Monto_Total DESC;
 ```
 ![imagen p4](./picture/P4.png)
+
 *Monto total y cantidad de transacciones por tipo*
 
 Transfer y Expense concentran los mayores montos ($16.7 millones cada uno), superando a Sale y Purchase ($13.7 millones cada uno), a pesar de que el número de transacciones es similar entre los cuatro tipos (25,000). Esto indica que, en promedio, las transacciones de Transfer y Expense tienen un valor individual más alto que las de Sale y Purchase.
@@ -178,6 +182,7 @@ GROUP BY
 ORDER BY Monto_Total DESC;
 ```
 ![imagen p5](./picture/P5.png)  
+
 *Cantidad de transacciones y monto total por rango*
 
 El 84.4% de las transacciones se concentra en los rangos Media y Alta, con las transacciones Altas aportando el mayor monto total ($35.9M), a pesar de tener ligeramente menos transacciones que el rango Medio. Las transacciones Bajas, aunque representan el 15.6% del volumen, solo aportan el 5.2% del monto total transaccionado.
@@ -200,6 +205,7 @@ GROUP BY FORMAT([Date], 'yyyy-MM')
 ORDER BY Mes ASC;
 ```
 ![imagen p6](./picture/P6.png)  
+
 *Monto total transaccionado por mes durante 2023*
 
 Junio fue el mes con mayor monto transaccionado ($5.15M), mientras que Septiembre registró el más bajo ($4.98M). La diferencia entre el mes más fuerte y el más débil es de apenas 3.5%, mostrando un comportamiento muy estable a lo largo del año, sin estacionalidad marcada ni picos atípicos.
@@ -225,7 +231,9 @@ GROUP BY Category
 ORDER BY Porcentaje DESC;
 ```
 ![imagen p7](./picture/P7.png) 
+
 *Participación porcentual de cada categoría sobre el monto total*
+
 Cada categoría representa aproximadamente el 25% del monto total transaccionado (rango de 24.80% a 25.13%). Ninguna categoría concentra una porción significativamente mayor que las demás.
 
 Dado este equilibrio, el equipo financiero puede distribuir sus recursos de control y auditoría de manera uniforme entre las cuatro categorías, sin necesidad de priorizar una sobre otra.
@@ -251,7 +259,8 @@ FROM RankedClientes
 WHERE Ranking <= 3
 ORDER BY Category, Ranking;
 ```
-![imagen p8](./picture/P8.png)   
+![imagen p8](./picture/P8.png)  
+
 *Los 3 clientes/proveedores con mayor monto dentro de cada categoría*
 
 Customer 25 lidera la categoría Expense con el monto individual más alto del ranking ($182,469.70). Ningún cliente aparece en el top 3 de más de una categoría, lo que indica que el liderazgo por volumen está distribuido entre distintos clientes según el tipo de cuenta que manejan.
@@ -288,6 +297,7 @@ FROM Deciles
 GROUP BY CASE WHEN Decil = 1 THEN 'Top 10%' ELSE 'Resto (90%)' END;
 ```
 ![imagen p9](./picture/P9.png)
+
 *Distribución del monto total entre el Top 10% y el resto de clientes/proveedores*
 
 El 10% de los clientes/proveedores con mayor volumen concentra únicamente el 10.61% del monto total transaccionado, una proporción prácticamente idéntica a su peso numérico. Esto indica que la cartera de clientes/proveedores está distribuida de forma muy equitativa, sin que existan cuentas dominantes que concentren el riesgo financiero.
@@ -320,6 +330,7 @@ FROM PromedioPorTransaccion
 ORDER BY ABS(Promedio_Cliente - Promedio_Categoria) DESC;
 ```
 ![imagen p10](./picture/P10.png)
+
 *Top 15 clientes/proveedores con mayor desviación respecto al promedio de su categoría*
 
 Customer 36 (Liability) presenta la mayor desviación positiva, con un promedio de transacción 7.30% superior al de su categoría, mientras que Customer 79 (Asset) muestra la mayor desviación negativa, con -6.67%. En general, las desviaciones del Top 15 se mantienen en un rango moderado (entre 5% y 7.3%), sin casos que representen un comportamiento extremadamente anómalo.
@@ -355,6 +366,7 @@ FROM ResumenMensual
 ORDER BY Mes ASC;
 ```
 ![imagen p11](./picture/P11.png)
+
 *Comparativa de ingresos y gastos mes a mes durante 2023*
 
 El año 2023 cerró con 6 meses de ganancia y 6 meses de pérdida. Marzo fue el mes más rentable (+$74,086.86), mientras que Mayo registró la mayor pérdida (-$38,573.74). El segundo semestre mostró mayor debilidad, con pérdidas en 4 de 5 meses entre julio y noviembre, aunque diciembre logró cerrar el año con una recuperación positiva (+$25,352.26).
