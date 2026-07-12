@@ -6,6 +6,10 @@
 El personal contable y financiero de **SQLITO SAC** desea mejorar el control de sus cuentas por cobrar, optimizar la gestión de pagos y obtener una visión clara del estado de sus transacciones. Sin embargo, no cuentan con una visión clara de los datos financieros consolidados. Mi objetivo es utilizar **SQL** dentro de **SQL Server Management Studio**, analizando sus transacciones contables (montos, tipos de cuenta, clientes y métodos de pago) para proporcionar recomendaciones al departamento de Finanzas que faciliten decisiones exitosas.
 ## 📩 Si quieres aprender SQL Conéctate conmigo
 <p align="center">
+  <a href="https://www.linkedin.com/in/brayan-salda%C3%B1a-b8b998421/?skipRedirect=true">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+</p>
 
 ## Estructura del Proyecto
 
