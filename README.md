@@ -63,7 +63,7 @@ FROM dbo.financial_accounting
 GROUP BY [Reference]
 HAVING COUNT(*) > 1;
 ```
-![duplicado](./picture/operacion_duplicada.png)
+![Operacion_duplicado](./picture/operacion_duplicada.png)
 
 ## Análisis Exploratorio de Datos (EDA) e Insights
 ### Pregunta 1 : ¿Cuánto se ha transaccionado (débito y crédito) en cada categoría de cuenta?
